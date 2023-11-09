@@ -1,7 +1,7 @@
 import asyncio
 import edge_tts  # pip install edge-tts==6.1.3
 import os
-from playsound import playsound  # 音频播放 pip install playsound==1.2.2
+#from playsound import playsound  # 音频播放 pip install playsound==1.2.2
 # audio_file, vtt_file当做变量传入
 """
 在代码中，audio_file和vtt_file是非默认参数，voice、rate和volume具有默认值。
