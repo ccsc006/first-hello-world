@@ -12,7 +12,7 @@ from audio_to_text import transcribe_audio
 
 st.title("mp3转文字:fire:")
 st.write("上传mp3文件转成文字。")
-target_directory = "C:\\streamlit\\download"
+target_directory = "/mount/src/first-hello-world/pages/"
 os.makedirs(target_directory, exist_ok=True)
 
 mp3 = st.file_uploader("请上传MP3文件", type=["mp3",'wav'])
@@ -34,7 +34,4 @@ if mp3 is not None:
         with open(mp3_txt, 'w',encoding='utf-8') as f:
             f.write(res1)
 
-        base_download_url = "http://10.8.50.39/"
-        converted_pdf_file = base_download_url + mp3_txt
-
-        st.markdown(f"[:arrow_down: 下载文件文件]({converted_pdf_file})")
+        
