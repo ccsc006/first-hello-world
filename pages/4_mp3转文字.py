@@ -7,9 +7,9 @@ import streamlit as st
 from streamlit_extras.add_vertical_space import add_vertical_space
 from PyPDF2 import PdfReader
 
-sys.path.append('C:\\streamlit\\pages\\audio_and_text')
+# sys.path.append('C:\\streamlit\\pages\\audio_and_text')
 
-from audio_to_text import transcribe_audio
+from audio_and_text.audio_to_text import transcribe_audio
 
 st.title("mp3转文字:fire:")
 st.write("上传mp3文件转成文字。")
