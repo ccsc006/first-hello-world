@@ -1,15 +1,17 @@
 
 # -*- coding: UTF-8 -*-
 import os,sys
-
 import streamlit as st
-
 from streamlit_extras.add_vertical_space import add_vertical_space
 from PyPDF2 import PdfReader
 
 sys.path.append('/mount/src/first-hello-world/pages/audio_and_text')
 from audio_to_text import transcribe_audio
 
+_ = load_dotenv(find_dotenv())
+
+# openai.api_key  = os.getenv('RAW_OPENAI_API_KEY')
+openai.api_key  = os.getenv('OPENAI_API_KEY')
 st.title("mp3转文字:fire:")
 st.write("上传mp3文件转成文字。")
 target_directory = "/mount/src/first-hello-world/pages/"

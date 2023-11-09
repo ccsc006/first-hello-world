@@ -1,5 +1,6 @@
 import streamlit as st
 import openai
+import os
 from dotenv import load_dotenv, find_dotenv
 from langchain.callbacks import get_openai_callback
 # 设置OpenAI API密钥
