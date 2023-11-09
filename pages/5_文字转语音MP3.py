@@ -8,8 +8,8 @@ import chardet
 st.title("文字转成语音:star:")
 st.write("上传文本文件转成语音mp3格式的文件。")
 
-# sys.path.append('C:\\streamlit\\pages\\audio_and_text')
-from audio_and_text.text_to_audio_gpt import txt_mp3_subtitles
+sys.path.append('mount/src/first-hello-world/pages/audio_and_text')
+from text_to_audio_gpt import txt_mp3_subtitles
 
 target_directory = "C:\\streamlit\\download"
 os.makedirs(target_directory, exist_ok=True)
