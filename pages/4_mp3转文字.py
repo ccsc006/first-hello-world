@@ -4,6 +4,8 @@ import os,sys
 import streamlit as st
 from streamlit_extras.add_vertical_space import add_vertical_space
 from PyPDF2 import PdfReader
+from dotenv import load_dotenv, find_dotenv
+
 
 sys.path.append('/mount/src/first-hello-world/pages/audio_and_text')
 from audio_to_text import transcribe_audio
