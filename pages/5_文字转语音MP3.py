@@ -11,7 +11,7 @@ st.write("上传文本文件转成语音mp3格式的文件。")
 sys.path.append('/mount/src/first-hello-world/pages/audio_and_text')
 from text_to_audio_gpt import txt_mp3_subtitles
 
-target_directory = "C:\\streamlit\\download"
+target_directory = "/mount/src/first-hello-world/pages/"
 os.makedirs(target_directory, exist_ok=True)
 
 txt = st.file_uploader("请上传文本文件", type=["txt"])
