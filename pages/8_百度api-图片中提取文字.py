@@ -15,7 +15,7 @@ API_KEY = 'PdCsbVjXwSGLn7mIQLlbPund'
 SECRET_KEY = 'U5LGidjAToCKKnlFGXMS4g9fCviAuUdZ'
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 # 指定c盘上的目标目录
-target_directory = "C:\\streamlit\\upload\\"
+target_directory = "/mount/src/first-hello-world/pages/"
 # 确保目标目录存在
 os.makedirs(target_directory, exist_ok=True)
 pic_file = st.file_uploader("请上传图片文件", type=["jpg", "png"])
