@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 from langchain.callbacks import get_openai_callback
 # 设置OpenAI API密钥
-openai.api_key = "Ysk-4dkEbx3yK1ZA7YoQzwLHT3BlbkFJIGAKFmF0aVdslYyjHKvp"
+openai.api_key = "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"
 
 # 创建Streamlit应用标题
 st.title("Chat with ZSZQ-3:star:")
