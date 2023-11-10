@@ -13,7 +13,7 @@ from audio_to_text import transcribe_audio
 # openai.api_key  = os.getenv('OPENAI_API_KEY')
 
 # 设置OpenAI API密钥
-openai.api_key = "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"
+openai.api_key = "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"
 st.title("mp3转文字:fire:")
 st.write("上传mp3文件转成文字。")
 target_directory = "/mount/src/first-hello-world/pages/"
