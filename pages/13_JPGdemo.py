@@ -5,7 +5,7 @@ import os
 from langchain.callbacks import get_openai_callback
 from dotenv import load_dotenv, find_dotenv
 # 设置OpenAI API密钥
-openai.api_key = "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"
+openai.api_key = "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"
 
 # _ = load_dotenv(find_dotenv())
 # openai.api_key  = os.getenv('OPENAI_API_KEY')

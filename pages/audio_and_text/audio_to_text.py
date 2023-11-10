@@ -3,7 +3,7 @@ import openai
 
 # 定义一个名为 transcribe_audio 的函数，它接受两个参数：audio_file 和 response_format
 def transcribe_audio(audio_file, response_format) -> str:
-    openai.api_key = "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"
+    openai.api_key = "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"
     """
     使用 whisper 模型将音频文件转录为文字，并以指定的格式返回转录结果。
     :param audio_file: 要转录的音频文件的路径
