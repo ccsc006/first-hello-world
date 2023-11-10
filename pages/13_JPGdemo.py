@@ -5,12 +5,10 @@ import os
 from langchain.callbacks import get_openai_callback
 from dotenv import load_dotenv, find_dotenv
 # 设置OpenAI API密钥
-# openai.api_key = "YOUR_API_KEY"
+openai.api_key = "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"
 
-_ = load_dotenv(find_dotenv())
-
-# openai.api_key  = os.getenv('RAW_OPENAI_API_KEY')
-openai.api_key  = os.getenv('OPENAI_API_KEY')
+# _ = load_dotenv(find_dotenv())
+# openai.api_key  = os.getenv('OPENAI_API_KEY')
 
 # 创建Streamlit应用标题
 st.title("生成图像描述:smile:")
