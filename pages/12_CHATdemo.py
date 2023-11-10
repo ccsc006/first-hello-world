@@ -5,11 +5,10 @@ from dotenv import load_dotenv, find_dotenv
 from langchain.callbacks import get_openai_callback
 # 设置OpenAI API密钥
 
-_ = load_dotenv(find_dotenv())
-
-# openai.api_key  = os.getenv('RAW_OPENAI_API_KEY')
-openai.api_key  = os.getenv('OPENAI_API_KEY')
-
+# _ = load_dotenv(find_dotenv())
+# openai.api_key  = os.getenv('OPENAI_API_KEY')
+# 设置OpenAI API密钥
+openai.api_key = "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"
 # 创建Streamlit应用标题
 st.title("Chat with ZSZQ-3:star:")
 
