@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from streamlit_extras.add_vertical_space import add_vertical_space
+import seaborn as sns
 import numpy as np
 import altair as alt
 from matplotlib import  pyplot as plt
@@ -95,17 +96,21 @@ bar_chart = alt.Chart(energy_source).mark_bar().encode(  # mark_bar条形图  ma
     color="部门:N"
 )
 st.altair_chart(bar_chart, use_container_width=True)
-# col11.metric(label="最大值", value=f"{df2.本周新开户.max():,.0f}", delta="最高价",subvalue=max_value['部门'])
-# col22.metric(label="最小值", value=f"{df2.本周新开户.min():,.0f}", delta="最低价")
-# col33.metric(label="价格范围", value=f"{df2.本周新开户.max()-df2.本周新开户.min():,.0f}", delta="价格范围")
-# #
+
 
 
 # ======================
-# max_value = df2.loc[df2['本周新开户'].idxmax()]
-# col11.metric(
-#     label="最大值",
-#     value=f"{max_value['本周新开户']:,.0f}",
-#     delta="最高价",
-#     subvalue=max_value['部门']
-# )
+
+st.subheader("各个部门 每周新增市值的对比", divider="rainbow")  # 彩虹分割线
+energy_source = pd.DataFrame({
+    "部门": df2["部门"],
+    "本周新增市值": df2["本周新增市值"],
+    "第几周": df2["第几周"]
+})
+
+bar_chart = alt.Chart(energy_source).mark_bar().encode(  # mark_bar条形图  mark_area 区域  mark_boxplot mark_boxplot
+    x="第几周:O",
+    y="sum(本周新增市值):Q",
+    color="部门:N"
+)
+st.altair_chart(bar_chart, use_container_width=True)
